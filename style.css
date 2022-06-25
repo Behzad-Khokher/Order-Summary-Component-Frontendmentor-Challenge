@@ -19,6 +19,11 @@ body {
     font-family: "Red Hat Display", sans-serif;
     background-color: var(--pale-blue);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 
@@ -54,7 +59,15 @@ button {
     margin: 20px;
     border-radius: 5px;
     box-shadow: 3px 3px 3px 3px hsl(228, 45%, 44%, 0.15);
+    padding-bottom: 20px;
 
+}
+
+.container .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -64,8 +77,13 @@ button {
     border-radius: 5px 5px 0 0;
 }
 
+.container h1{
+    color: hsl(223, 47%, 23%);
+    margin: 10px 0;
+}
+
 .container .pricing {
-    margin: 20px auto;
+    margin: 30px auto;
     padding: 10px;
     background-color: var(--very-pale-blue);
     width: 90%;
@@ -102,10 +120,15 @@ button {
     color: var(--bright-blue)
 }
 
+.desc {
+    padding: 0px 30px;
+}
+
 .btn-primary {
     background-color: var(--bright-blue);
     color: #fff;
     padding: 10px;
+    margin-bottom: 10px;
 }
 
 .btn-primary:hover,
@@ -130,4 +153,16 @@ button {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+
+@media (min-width: 768px) {
+    .bg__image {
+        background: url("./images/pattern-background-desktop.svg") no-repeat center/cover;
+        height: 50vh;
+    }
+
+    .container{
+        width: 500px;
+    }
 }
